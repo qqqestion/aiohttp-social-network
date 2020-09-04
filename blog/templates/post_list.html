@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="{{ url('user-detail', user_id=post.user_id) }}">
+                        <img src="{{ static('media/user_pics') }}/{{ post.user_img }}" width="70px" height="70px">
+                        {{ post.user }}
+                    </a>
+                    <small class="text-muted">{{ post.posted_at }}</small>
+                </div>
+                <h2><a class="article-title" href="{{ url('post-detail', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

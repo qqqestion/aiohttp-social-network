@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST" class="login-form">
+        <fieldset class="form-group">
+            <legend class="border-top mb-4">Login</legend>
+            <input type="text" id="login" name="login" placeholder="Email">
+            <input type="password" id="password" name="password" placeholder="Password">
+        </fieldset>
+        <button class="btn btn-outline-primary" type="submit">Log In</button>
+        <a class="btn btn-outline-primary" href="#">Don't have an account?</a>
+    </form>
+{% endblock content %}

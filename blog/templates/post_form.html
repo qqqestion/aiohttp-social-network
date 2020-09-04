@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="login-form">
+        <form method="post">
+            <label for="title">Title</label>
+            <br>
+            <input type="text" required name="title">
+            <br>
+            <label for="post_content">Content</label>
+            <br>
+            <textarea name="post_content" cols="70" rows="10" maxlength="5000" required id="post_content"></textarea>
+            <br>
+            <button class="btn btn-outline-info" type="submit">Post</button>
+            <a class="btn btn-outline-danger" href="{{ url('home') }}">Cancel</a>
+        </form>
+    </div>
+
+{% endblock content %}

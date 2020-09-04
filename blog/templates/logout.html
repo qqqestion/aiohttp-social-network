@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST" class="login-form">
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">Log Out</button>
+            <a class="btn btn-outline-primary" href="{{ url('home') }}">Cancel</a>
+        </div>
+    </form>
+{% endblock content %}

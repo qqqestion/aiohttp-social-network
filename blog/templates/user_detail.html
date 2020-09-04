@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <div style="">
+        <img style="float: left" src="{{ static('media/user_pics') }}/{{ image }}" width="150px" height="150px">
+        <div style="float: left; margin-left: 15px">
+            <h1 style="">{{ first_name }} {{ last_name }}</h1>
+            <a class="btn btn-outline-info">Write a message</a>
+            <a class="btn btn-outline-info">Add to friend</a>
+        </div>
+    </div>
+    <div style="margin-top: 160px">
+        {% for post in user_posts %}
+            <div class="media content-section">
+                <div class="media-body">
+                    <h1>{{ post.title }}</h1>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

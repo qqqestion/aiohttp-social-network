@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    <h6 class="article-title">By <a href="">{{ user }}</a></h6>
+    <p>Posted at {{ posted_at.date() }}, {{ posted_at.hour }}:{{ posted_at.minute }}</p>
+    <h1>{{ title }}</h1>
+    <p class="article-content">{{ content }}</p>
+{% endblock content %}
